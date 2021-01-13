@@ -34,7 +34,8 @@
   },
   "main": "src/bot.ts",
   "scripts": {
-    "build": "node bin/build.js",
+    "build": "node ./bin/build.js",
+    "compile": "node bin/compile.js",
     "lint": "node bin/lint.js",
     "lint:fix": "npm run lint -- fix",
     "start": "node dist/bot.js",
