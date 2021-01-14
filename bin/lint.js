@@ -6,16 +6,18 @@
     const command = "eslint --ignore-path .gitignore 'src/**/*'";
     
     // Start the linter
-    console.log("[LINT] Starting lint your code...");
+    console.log("[LINT] Starting lint command!");
 
     // If using "fix" args, run this condition first
     if (argv[0] == "fix") {
-      console.log("[LINT] Fixing your code...");
+      console.log("[LINT FIX] Fixing your code using eslint...");
       await exec(`${command} --fix`);
-      console.log("[LINT] Finished fixing your code.");
-      console.log("[LINT] Check for non-fixable errors on your code...");
+      console.log("[LINT] Finished fixing your code!");
+      return undefined;
     }
 
+    // If no args, start from here
+    console.log("[LINT] Linting your code, checking for error...")
     await exec(command); 
     // If there is no error when linting, print this message
     console.log("[LINT] No error has found on your code, good work!");

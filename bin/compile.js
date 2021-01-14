@@ -2,12 +2,15 @@
   try {
     const exec = require("./Utils").exec;
 
-    // Remove old dist folder
+    // Start the compiler
+    console.log("[COMPILE] Starting compile command!");
+
+    // Removing old dist folder
     console.log("[CLEANUP] Removing old dist folder...");
     await exec("rm -rf ./dist");
     console.log("[CLEANUP] Finished removing the old dist folder.");
   
-    // Start to compile the project
+    // Compiling the project
     console.log("[COMPILE] Compile the project using the TSC compiler...");
     let startTime = new Date(); // Start the timer
     await exec("tsc");
