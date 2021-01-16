@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { Message } from "discord.js";
-import YuruClient from "./module/Client";
+import YuruClient from "./module/ClientModule";
 
 const client = new YuruClient({
   cacheChannels: true,
