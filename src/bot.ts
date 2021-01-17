@@ -8,10 +8,6 @@ const client = new YuruClient({
   disabledEvents: ["GUILD_SYNC", "PRESENCE_UPDATE", "TYPING_START"]
 });
 
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user?.tag}!`);
-});
-
 client.on("message", async(msg: Message) => {
   if (msg.content == "!ping") {
     msg.channel.send("Pong!");
